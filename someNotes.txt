@@ -1,0 +1,7 @@
+Variables declared within setup() are not accessible within other functions, including draw().
+Called directly after setup(), the draw() function continuously executes the lines of code contained inside its block 
+until the program is stopped or noLoop() is called.
+
+so, if we put class inside setup, then even we change the value inside it afterwards, which means 
+so we have to declear variables out side the set up.
+put inside draw, it will renew the time for each loop, the graph won't move at all.

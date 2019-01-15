@@ -7,12 +7,25 @@
     <!-- <script src="./origReference.js"></script>  -->
   </head>
   <body>
-    <form id = "speedRunning" onsubmit = "">
+    <form id = "theme">
       <fieldset>
-        <legend>Choose the speed of Waving:</legend>
-          <input id = "speedRun" type = "text" name = "runingSpeed" value = "????">
-          <input type="submit" value="Confirm">
-        </fieldset>
+        <legend>Try it out:</legend>
+          Wave color options:<br>
+          <input id = "color0" type="radio" name = "coloroptions"> Random changing color(default)<br>
+          <input id = "color1" type="radio" name = "coloroptions"> Fixed two colors(red and blue) <br>
+          <input id = "color2" type="radio" name = "coloroptions"> Or, personalise them! <br>
+
+
+          &nbsp&nbsp&nbsp Hue of the upper wave: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 00 <input type="range" id ="Pcolor1" min="0" max="360"> 360 <br>
+          &nbsp&nbsp&nbsp&nbspBrightness of the upper wave:  50 <input type = "range" id = "Pcolor2" min="50" max="100"> 100 <br>
+          &nbsp&nbsp&nbsp&nbspHue of the lower wave:  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 00 <input type = "range" id = "Pcolor3" min="0" max="360"> 360 <br>
+          &nbsp&nbsp&nbsp&nbspBrightness of the upper wave: 50 <input type = "range" id = "Pcolor4" min="50" max="100"> 100 <br>
+
+
+          Speed options:<br>
+
+          <input id = "inputSpeed" type = "number">
+      </fieldset>
     </form>
   </body>
 </html>
