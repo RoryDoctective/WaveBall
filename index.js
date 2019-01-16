@@ -2,6 +2,7 @@ let base;
 let cover;
 let settings;
 
+
 function setup() {
   base = new Base();
   cover = new Cover();
@@ -13,26 +14,13 @@ function setup() {
 
 function draw() {
 
-  
-
-  
-  //settings.changeSpeed();
-  //frameRate(fr);
-
-  
-  //console.log(fr)
-  //console.log(frameRate())
-  //console.log(settings.fps);
-  //console.log( frameRate() );
-  
-
   if( settings.judge1 === false && settings.judge2 === false){
     base.setColour(); // random 
   }else if ( settings.judge1 === true ) {
     base.setColour1(); // fixed defult 
   }else{
     base.setColour2(); // fixed input value
-  };  
+  }  
   
   if( settings.rotate === false){
     base.drawRect();
@@ -45,7 +33,7 @@ function draw() {
     base.drawRectRotate();
     base.drawRotate();
     pop();    
-  };
+  }
 
   base.incrementA(); 
   base.incrementT();
@@ -54,19 +42,18 @@ function draw() {
 
 
 
-
-
+///////// DOM 
 document.addEventListener("DOMContentLoaded", function(){
   // prevent default
   let y = document.getElementById("theme");
   y.addEventListener("submit", function (event){ event.preventDefault() });
 
   // speed controls
-  function changeRunTime(event){
+  function changeRunTime(){
     document.getElementById("Rotation2").checked = true;
     changeRotationFunction();
     base.angleIndex = Number(document.getElementById("inputSpeed").value);
-  };
+  }
 
   let x = document.getElementById("inputSpeed");
   x.addEventListener("change", changeRunTime);
@@ -74,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   // colour controls
-  // first 2 oftions
-  function changeColorFunction(event){
+  // first 2 options
+  function changeColorFunction(){
     let colorOption0 = document.getElementById("color0").checked;
     if (colorOption0){
       settings.judge1 = false; 
@@ -83,8 +70,8 @@ document.addEventListener("DOMContentLoaded", function(){
     }else{
       settings.judge1 = true; 
       settings.judge2 = false;
-    };
-  };
+    }
+  }
 
   let colorElement0 = document.getElementById("color0");
   colorElement0.addEventListener("change", changeColorFunction);
@@ -92,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function(){
   colorElement1.addEventListener("change", changeColorFunction);
   
 
-  // the last option->the range bar
+  // the last option->4 range bars
   let PcolorEle1 = document.getElementById("Pcolor1");
   PcolorEle1.addEventListener("change", function(){
     document.getElementById("color2").checked = true;
@@ -129,23 +116,20 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   // rotation controls
-  function changeRotationFunction(event){
+  function changeRotationFunction(){
     let rotationOption1= document.getElementById("Rotation1").checked;
     if (rotationOption1){
       settings.rotate = false; 
     }else{
       settings.rotate = true; 
-    };
-    console.log(settings.rotate);
-  };
-
+    }
+  }
 
   let rotationEle1 = document.getElementById("Rotation1");
   rotationEle1.addEventListener("change", changeRotationFunction);
 
   let rotationEle2 = document.getElementById("Rotation2");
   rotationEle2.addEventListener("change", changeRotationFunction);
-
 
 })
 
