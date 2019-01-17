@@ -3,7 +3,7 @@ class Parent{
 	constructor(widthGeneral, heightGeneral,t){
 		this._widthGeneral = widthGeneral || 400;
 		this._heightGeneral = heightGeneral || 400;
-		this.t = t || 0 ;
+		
 	}
 
 	get widthGeneral(){
@@ -19,8 +19,8 @@ class Parent{
 
 
 class Base extends Parent{
-	constructor(widthGeneral, heightGeneral, t, hue1, br1, hue2, br2, canvWid, canvHei,saturation, rectNum, rectW, angle, angleIndex){
-		super(widthGeneral, heightGeneral, t);
+	constructor(widthGeneral, heightGeneral, hue1, br1, hue2, br2, canvWid, canvHei,saturation, rectNum, angle, angleIndex,t){
+		super(widthGeneral, heightGeneral);
 		this._hue1 = hue1 || 0;
 		this._br1 = br1 || 100;
 		this._hue2 = hue2 || 180;
@@ -32,6 +32,7 @@ class Base extends Parent{
 		this.rectW = 400 / rectNum || 40;
 		this._angle = angle || 0;
 		this._angleIndex = angleIndex || 0.01;
+		this.t = t || 0;
 	}
 
 	createCan(){
@@ -175,8 +176,8 @@ class Base extends Parent{
 
 
 class Cover extends Parent{
-	constructor(widthGeneral, heightGeneral, t, circleVertexNum, R, circleColour, circleWid){
-		super(widthGeneral, heightGeneral, t);
+	constructor(widthGeneral, heightGeneral, circleVertexNum, R, circleColour, circleWid){
+		super(widthGeneral, heightGeneral);
 		this.circleVertexNum = circleVertexNum || 360;
 		this.R = R || 180;
 		this.circleColour = circleColour || 0;
