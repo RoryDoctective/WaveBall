@@ -23,10 +23,12 @@ function draw() {
   }  
   
   if( settings.rotate === false){
+    // not rotating
     base.drawRect();
     base.draw();
 
   }else{
+    // rotating
     push();
     translate( base.canvWid / 2, base.canvHei / 2 );
     rotate(base.angle);
@@ -79,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function(){
   colorElement1.addEventListener("change", changeColorFunction);
   
 
-  // the last option->4 range bars
+  // the last option-> 4 range bars
   let PcolorEle1 = document.getElementById("Pcolor1");
   PcolorEle1.addEventListener("change", function(){
     document.getElementById("color2").checked = true;

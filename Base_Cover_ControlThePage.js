@@ -1,6 +1,6 @@
 
 class Parent{
-	constructor(widthGeneral, heightGeneral,t){
+	constructor(widthGeneral, heightGeneral){
 		this._widthGeneral = widthGeneral || 400;
 		this._heightGeneral = heightGeneral || 400;
 		
