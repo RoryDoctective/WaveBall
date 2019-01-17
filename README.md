@@ -1,14 +1,15 @@
 # Double colored spinning top
 
 ## Outline of the whole project. 
-1. Base_Cover_ControlThePage.js file contains all four classes been used. They are Base, Cover, controlThePage and Parent. Parent is a parent class, and it has two child classes which are Base and Cover.  
-1. Index.js file compose of two parts. The p5 part contains function setup() and draw() using classes be defined, and the DOM part explains all how value of be changed when user interact with the index html.  
-1. Index.html file contains a form with different input type which allows users input. It is an example of implement everything.
-1. An ESLint result file in html format is included. 
-The folder stands independently. (p5.js inside the folder and don¡¯t need internet.)
+1. **Base_Cover_ControlThePage.js file contains all four classes been used. They are Base, Cover, controlThePage and Parent. Parent is a parent class, and it has two child classes which are Base and Cover.** 
+1. **Index.js file compose of two parts. The p5 part contains function setup() and draw() using classes be defined, and the DOM part explains all how value of be changed when user interact with the index html.**
+1. **Index.html file contains a form with different input type which allows users input. It is an example of implement everything.**
+1. **An ESLint result file in html format is included. **
+The folder stands independently. (p5.js inside the folder and don't need internet.)
 
-Original code's License:
+**Original code's License:**
 [![License: CC BY-SA 3.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/3.0/)
+
 
 ### Base_Cover_ControlThePage.js
 #### The Parent class
